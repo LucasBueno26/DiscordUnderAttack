@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>discord-warn</groupId>
+  <artifactId>dicord</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+	<repositories>
+  		<repository>
+  			<id>jcenter</id>
+  			<name>JCenter</name>
+  			<url>https://jcenter.bintray.com</url>
+  		</repository>
+  		<repository>
+    <id>dv8tion</id>
+    <name>m2-dv8tion</name>
+    <url>https://m2.dv8tion.net/releases</url>
+</repository>
+  	</repositories>
+    <dependencies>
+    	<dependency>
+            <groupId>net.dv8tion</groupId>
+            <artifactId>JDA</artifactId>
+            <version>4.3.0_277</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.0-beta9</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-jdk14</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+    </dependencies>
+    
+ 	 <build>
+		<plugins>
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.3</version>
+                	<configuration>
+					<outputFile>C:\Users\DrPaulo\Desktop\DiscordPLugin.jar</outputFile>
+				</configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <minimizeJar>true</minimizeJar>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+		</plugins>
+	</build>
+</project>
