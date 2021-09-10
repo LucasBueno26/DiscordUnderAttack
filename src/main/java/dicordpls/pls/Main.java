@@ -27,7 +27,7 @@ public class Main extends JavaPlugin {
 			saveDefaultConfig();
 		}
 		try {
-			jda = JDABuilder.createDefault("ODgyMzczNzM2Mzk1ODMzMzk0.YS6clA.AEmNF3AZu-fuJroJ9JrF6S4eb1A").build();
+			jda = JDABuilder.createDefault("<token>").build();
 		} catch (LoginException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
