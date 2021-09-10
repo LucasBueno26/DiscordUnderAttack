@@ -26,10 +26,7 @@ public class UtilsWarn {
 		EmbedBuilder me = new EmbedBuilder();
 		me.setColor(Color.RED);
 		me.setTitle("SUA FACÇÃO ENTROU SOB ATAQUE");
-		me.setDescription("Uma nova possível invasão foi detectada nos claims da sua facção, verifique as coordenadas"
-				+ "do claim abaixo e tente protegê-las o mais rápido possível.");
-		me.setFooter("A luta é o melhor caminho");
-		me.setAuthor("FowFactions - Warn");
+		me.setDescription("Sua facção acaba de ser atacada! Loge no servidor para se proteger!");
 		MessageEmbed ee = me.build();
 		Main.jda.retrieveUserById(id).complete().openPrivateChannel().complete().sendMessage(ee).queue();;
 		
@@ -41,10 +38,7 @@ public class UtilsWarn {
 		me.setColor(Color.GREEN);
 		me.setTitle("SEU DISCORD FOI VINCULADO\n\n");
 		me.setDescription("Você vinculou suas conta " + p.getName()
-				+ " com sucesso. Agora você será notificado por discord caso sua facção esteja sob-ataque!"
-				+ "\n\nCaso queria desvincular e/ou alterar, realize a operação novamente in-game.");
-		me.setFooter("\n\nA luta é o melhor caminho");
-		me.setAuthor("FowFactions ~");
+				+ " com sucesso.);
 		MessageEmbed ee = me.build();
 		Main.jda.retrieveUserById(id).complete().openPrivateChannel().complete().sendMessage(ee).complete().addReaction("✔").queue();
 	}
@@ -60,8 +54,6 @@ public class UtilsWarn {
 		ArrayList<String> lore = new ArrayList<>();
 		itemm.setDisplayName("§fVincular Discord");
 		lore.add("§7Clique para adicionar/alterar seu ID discord");
-		lore.add("§7e receba as notificações quando sua");
-		lore.add("§7facção estiver sob-ataque.");
 		lore.add("");
 		if (!Main.getInstance().mn.contains(p.getName())) {
 			lore.add("§cNão Vinculado");
